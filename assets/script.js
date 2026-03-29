@@ -86,3 +86,30 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 
 }
+
+
+
+//scrollbar
+
+const slider = document.querySelector('.has-scrollbar1');
+
+let scrollAmount = 0;
+
+setInterval(() => {
+  const cardWidth = slider.querySelector('.slider-item').offsetWidth;
+
+  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+    slider.scrollTo({
+      left: 0,
+      behavior: "smooth"
+    });
+    scrollAmount = "0";
+  } else {
+    scrollAmount += cardWidth;
+
+    slider.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth"
+    });
+  }
+}, 3000);
