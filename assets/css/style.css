@@ -109,7 +109,8 @@ input {
 
 input::placeholder { font: inherit; }
 
-body { background-color: hsl(30, 60%, 97%); }
+body { background-color: hsl(30, 60%, 97%); 
+}
 
 /**
  * scrollbar style
@@ -971,11 +972,6 @@ main {
   #PRODUCT MINIMAL
 \*-----------------------------------*/
 
-.product-minimal { 
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 30px; }
 
 .product-minimal .product-showcase { 
   flex: 1;
