@@ -80,4 +80,4 @@ cd ecommerce-website
 ## 👤 Author
 - Name: Subhan Raza
 - GitHub: https://github.com/Subhan46-web
-- LinkedIn: linkedin.com/in/subhan-raza-b8b892303
+- LinkedIn: linkedin.com/in/subhanraza
