@@ -1,0 +1,30 @@
+<svg width="280" height="72" viewBox="0 0 280 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vmBadge" x1="6" y1="8" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C8A77"/>
+      <stop offset="1" stop-color="#13483D"/>
+    </linearGradient>
+    <linearGradient id="vmGlow" x1="18" y1="16" x2="46" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7EE"/>
+      <stop offset="1" stop-color="#F3E7D9"/>
+    </linearGradient>
+    <filter id="vmShadow" x="0" y="4" width="66" height="66" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#13483D" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#vmShadow)">
+    <rect x="6" y="8" width="54" height="54" rx="18" fill="url(#vmBadge)"/>
+    <path d="M21 30.5C21 24.701 24.925 20 30 20C35.075 20 39 24.701 39 30.5" stroke="#D88C54" stroke-width="3.2" stroke-linecap="round"/>
+    <rect x="18" y="28" width="24" height="24" rx="8" fill="url(#vmGlow)"/>
+    <path d="M23.5 38.5L29 45L37 34" stroke="#1F6F5F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="45.5" cy="22.5" r="4.5" fill="#D88C54"/>
+    <path d="M45.5 16.8V13.8M51.2 22.5H54.2M39.8 22.5H36.8M49.5 18.5L51.6 16.4M41.5 26.5L39.4 28.6" stroke="#FFF7EE" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <text x="76" y="33" fill="#13483D" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.03em">Value</text>
+    <text x="149" y="33" fill="#D88C54" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.03em">Mart</text>
+    <text x="77" y="52" fill="#6F655D" font-family="Manrope, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.28em">CURATED ONLINE STORE</text>
+  </g>
+</svg>

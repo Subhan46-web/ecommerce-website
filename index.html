@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,12 +22,12 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
 </head>
 
-<body>
+<body class="storefront">
 
 
   <div class="overlay" data-overlay></div>
@@ -56,17 +56,19 @@
 
           <div class="newsletter-header">
 
-            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+            <p class="newsletter-kicker" data-i18n="members_only">Members only</p>
 
-            <p class="newsletter-desc">
-              Subscribe the <b>ValueMart</b> to get latest products and discount update.
+            <h3 class="newsletter-title" data-i18n="newsletter_title">Get first access to new drops and private offers.</h3>
+
+            <p class="newsletter-desc" data-i18n-html="newsletter_desc">
+              Join <b>ValueMart</b> for curated launches, seasonal edits, and limited-time savings sent straight to your inbox.
             </p>
 
           </div>
 
-          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+          <input type="email" name="email" class="email-field" placeholder="Enter your email address" data-i18n-placeholder="newsletter_placeholder" required>
 
-          <button type="submit" class="btn-newsletter">Subscribe</button>
+          <button type="submit" class="btn-newsletter" data-i18n="join_now">Join now</button>
 
         </form>
 
@@ -96,7 +98,7 @@
 
     <div class="toast-detail">
 
-      <p class="toast-message">
+      <p class="toast-message" data-i18n="toast_message">
         Someone in new just bought
       </p>
 
@@ -189,7 +191,7 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <img src="./assets/images/logo/valuemart logo.png" alt="ValueMart's logo" width="120" height="36">
+          <img src="./assets/images/logo/valuemart-logo.svg" alt="ValueMart logo" width="174" height="48">
         </a>
 
         <div class="header-search-container">
@@ -204,16 +206,25 @@
 
         <div class="header-user-actions">
 
+          <div class="header-language-picker">
+            <label class="sr-only" for="navbar-language" data-i18n="language_label">Language</label>
+            <select id="navbar-language" name="navbar-language" aria-label="Select language">
+              <option value="en-US">EN</option>
+              <option value="es-ES">ES</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
 
-          <button class="action-btn">
+          <button class="action-btn" type="button" data-open-wishlist>
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
           </button>
 
-          <button class="action-btn">
+          <button class="action-btn" type="button" data-open-cart>
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
           </button>
@@ -231,11 +242,11 @@
         <ul class="desktop-menu-category-list">
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Home</a>
+            <a href="#" class="menu-title" data-i18n="nav_home">Home</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Categories</a>
+            <a href="#" class="menu-title" data-i18n="nav_categories">Categories</a>
 
             <div class="dropdown-panel">
 
@@ -380,7 +391,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Men's</a>
+            <a href="#" class="menu-title" data-i18n="nav_mens">Men's</a>
 
             <ul class="dropdown-list">
 
@@ -404,7 +415,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Women's</a>
+            <a href="#" class="menu-title" data-i18n="nav_womens">Women's</a>
 
             <ul class="dropdown-list">
 
@@ -428,7 +439,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Jewelry</a>
+            <a href="#" class="menu-title" data-i18n="nav_jewelry">Jewelry</a>
 
             <ul class="dropdown-list">
 
@@ -452,7 +463,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Perfume</a>
+            <a href="#" class="menu-title" data-i18n="nav_perfume">Perfume</a>
 
             <ul class="dropdown-list">
 
@@ -476,11 +487,11 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Blog</a>
+            <a href="#" class="menu-title" data-i18n="nav_blog">Blog</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Hot Offers</a>
+            <a href="#" class="menu-title" data-i18n="nav_offers">Hot Offers</a>
           </li>
 
         </ul>
@@ -489,38 +500,10 @@
 
     </nav>
 
-    <div class="mobile-bottom-navigation">
-
-      <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <button class="action-btn">
-        <ion-icon name="bag-handle-outline"></ion-icon>
-
-        <span class="count">0</span>
-      </button>
-
-      <button class="action-btn">
-        <ion-icon name="home-outline"></ion-icon>
-      </button>
-
-      <button class="action-btn">
-        <ion-icon name="heart-outline"></ion-icon>
-
-        <span class="count">0</span>
-      </button>
-
-      <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="grid-outline"></ion-icon>
-      </button>
-
-    </div>
-
     <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
 
       <div class="menu-top">
-        <h2 class="menu-title">Menu</h2>
+        <h2 class="menu-title" data-i18n="menu_title">Menu</h2>
 
         <button class="menu-close-btn" data-mobile-menu-close-btn>
           <ion-icon name="close-outline"></ion-icon>
@@ -530,7 +513,7 @@
       <ul class="mobile-menu-category-list">
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Home</a>
+          <a href="#" class="menu-title" data-i18n="nav_home">Home</a>
         </li>
 
         <li class="menu-category">
@@ -682,7 +665,7 @@
           <li class="menu-category">
 
             <button class="accordion-menu" data-accordion-btn>
-              <p class="menu-title">Language</p>
+              <p class="menu-title" data-i18n="language_label">Language</p>
 
               <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
             </button>
@@ -758,6 +741,36 @@
 
   </header>
 
+  <div class="mobile-bottom-navigation">
+
+    <button class="action-btn" data-mobile-menu-open-btn>
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
+
+    <button class="action-btn" type="button" data-open-cart>
+      <ion-icon name="bag-handle-outline"></ion-icon>
+      <span class="mobile-nav-label">Cart</span>
+
+      <span class="count">0</span>
+    </button>
+
+    <button class="action-btn" type="button" data-scroll-top>
+      <ion-icon name="home-outline"></ion-icon>
+    </button>
+
+    <button class="action-btn" type="button" data-open-wishlist>
+      <ion-icon name="heart-outline"></ion-icon>
+      <span class="mobile-nav-label">Wishlist</span>
+
+      <span class="count">0</span>
+    </button>
+
+    <button class="action-btn" data-mobile-menu-open-btn>
+      <ion-icon name="grid-outline"></ion-icon>
+    </button>
+
+  </div>
+
 
 
 
@@ -784,15 +797,18 @@
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Trending item</p>
+              <p class="banner-subtitle">New season edit</p>
 
-              <h2 class="banner-title">Men's New Essentials</h2>
+              <h2 class="banner-title">Modern essentials tailored for a sharper everyday wardrobe.</h2>
 
               <p class="banner-text">
-                starting at &dollar; <b>59</b>.00
+                Clean layers, premium textures, and easy silhouettes starting at &dollar; <b>59</b>.00
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+              <div class="banner-actions">
+                <a href="#new-products" class="banner-btn" data-i18n="shop_now">Shop now</a>
+                <a href="#product-minimal" class="banner-link" data-i18n="explore_collection">Explore collection</a>
+              </div>
 
             </div>
 
@@ -804,15 +820,18 @@
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Trending accessories</p>
+              <p class="banner-subtitle">Beauty and accessories</p>
 
-              <h2 class="banner-title">Accessories & Makeup</h2>
+              <h2 class="banner-title">Polished beauty picks that complete the full look.</h2>
 
               <p class="banner-text">
-                starting at &dollar; <b>79</b>.00
+                Elevated finishing touches for gifting and everyday luxury from &dollar; <b>79</b>.00
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+              <div class="banner-actions">
+                <a href="#new-products" class="banner-btn" data-i18n="shop_now">Shop now</a>
+                <a href="#product-minimal" class="banner-link" data-i18n="browse_collection">Browse collection</a>
+              </div>
 
             </div>
 
@@ -824,15 +843,18 @@
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Sale Offer</p>
+              <p class="banner-subtitle">Everyday value</p>
 
-              <h2 class="banner-title">Everyday Essentials</h2>
+              <h2 class="banner-title">Everyday bestsellers curated for style, gifting, and easy value.</h2>
 
               <p class="banner-text">
-                starting at &dollar; <b>29</b>.99
+                Daily-use favorites and fast-moving picks from &dollar; <b>29</b>.99
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+              <div class="banner-actions">
+                <a href="#new-products" class="banner-btn" data-i18n="shop_now">Shop now</a>
+                <a href="#deal-of-day" class="banner-link" data-i18n="discover_deals">Discover deals</a>
+              </div>
 
             </div>
 
@@ -852,11 +874,16 @@
       - CATEGORY
     -->
 
-    <div class="category">
+    <div class="category" id="category-quicklinks">
 
       <div class="container">
 
-        <div class="category-item-container has-scrollbar">
+        <div class="slider-shell">
+          <button class="slider-arrow slider-arrow-left" type="button" aria-label="Scroll categories left" data-slider-prev>
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+
+          <div class="category-item-container has-scrollbar" data-slider-track>
 
           <div class="category-item">
 
@@ -1018,6 +1045,11 @@
 
           </div>
 
+          </div>
+
+          <button class="slider-arrow slider-arrow-right" type="button" aria-label="Scroll categories right" data-slider-next>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
         </div>
 
       </div>
@@ -1542,13 +1574,18 @@
             - PRODUCT MINIMAL
           -->
 
-          <div class="product-minimal">
+          <div class="product-minimal" id="product-minimal">
 
             <div class="product-showcase">
 
-              <h2 class="title">New Arrivals</h2>
+              <h2 class="title" data-i18n="new_arrivals">New Arrivals</h2>
 
-              <div class="showcase-wrapper has-scrollbar">
+              <div class="slider-shell slider-shell-minimal">
+                <button class="slider-arrow slider-arrow-left" type="button" aria-label="Scroll new arrivals left" data-slider-prev>
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+
+                <div class="showcase-wrapper has-scrollbar" data-slider-track>
 
                 <div class="showcase-container">
 
@@ -1748,15 +1785,25 @@
                 
                 </div>
 
+                </div>
+
+                <button class="slider-arrow slider-arrow-right" type="button" aria-label="Scroll new arrivals right" data-slider-next>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
               </div>
 
             </div>
 
             <div class="product-showcase">
             
-              <h2 class="title">Trending</h2>
+              <h2 class="title" data-i18n="trending">Trending</h2>
             
-              <div class="showcase-wrapper  has-scrollbar">
+              <div class="slider-shell slider-shell-minimal">
+                <button class="slider-arrow slider-arrow-left" type="button" aria-label="Scroll trending left" data-slider-prev>
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+
+                <div class="showcase-wrapper  has-scrollbar" data-slider-track>
             
                 <div class="showcase-container">
             
@@ -1956,15 +2003,25 @@
             
                 </div>
             
+                </div>
+
+                <button class="slider-arrow slider-arrow-right" type="button" aria-label="Scroll trending right" data-slider-next>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
               </div>
             
             </div>
 
             <div class="product-showcase">
             
-              <h2 class="title">Top Rated</h2>
+              <h2 class="title" data-i18n="top_rated">Top Rated</h2>
             
-              <div class="showcase-wrapper  has-scrollbar">
+              <div class="slider-shell slider-shell-minimal">
+                <button class="slider-arrow slider-arrow-left" type="button" aria-label="Scroll top rated left" data-slider-prev>
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+
+                <div class="showcase-wrapper  has-scrollbar" data-slider-track>
             
                 <div class="showcase-container">
             
@@ -2165,6 +2222,11 @@
             
                 </div>
             
+                </div>
+
+                <button class="slider-arrow slider-arrow-right" type="button" aria-label="Scroll top rated right" data-slider-next>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
               </div>
             
             </div>
@@ -2177,9 +2239,9 @@
             - PRODUCT FEATURED
           -->
 
-          <div class="product-featured">
+          <div class="product-featured" id="deal-of-day">
 
-            <h2 class="title">Deal of the day</h2>
+            <h2 class="title" data-i18n="deal_of_day">Deal of the day</h2>
 
             <div class="showcase-wrapper has-scrollbar">
 
@@ -2241,14 +2303,14 @@
 
                         <div class="countdown-content">
 
-                          <p class="display-number">360</p>
+                          <p class="display-number">3</p>
 
                           <p class="display-text">Days</p>
 
                         </div>
 
                         <div class="countdown-content">
-                          <p class="display-number">24</p>
+                          <p class="display-number">22</p>
                           <p class="display-text">Hours</p>
                         </div>
 
@@ -2321,17 +2383,17 @@
               
                       <div class="countdown">
                         <div class="countdown-content">
-                          <p class="display-number">360</p>
+                          <p class="display-number">2</p>
                           <p class="display-text">Days</p>
                         </div>
               
                         <div class="countdown-content">
-                          <p class="display-number">24</p>
+                          <p class="display-number">8</p>
                           <p class="display-text">Hours</p>
                         </div>
               
                         <div class="countdown-content">
-                          <p class="display-number">59</p>
+                          <p class="display-number">52</p>
                           <p class="display-text">Min</p>
                         </div>
               
@@ -2359,7 +2421,7 @@
             - PRODUCT GRID
           -->
 
-          <div class="product-main">
+          <div class="product-main" id="new-products">
 
             <h2 class="title">New Products</h2>
 
@@ -3278,6 +3340,39 @@
 
   </main>
 
+  <div class="commerce-panel-backdrop" data-commerce-backdrop></div>
+
+  <aside class="commerce-panel" data-commerce-panel aria-hidden="true">
+    <div class="commerce-panel-shell">
+      <div class="commerce-panel-main">
+        <div class="commerce-panel-header">
+          <div>
+            <p class="commerce-panel-kicker" data-commerce-kicker data-i18n="saved_picks">Saved picks</p>
+            <h2 class="commerce-panel-title" data-commerce-title data-i18n="shopping_cart">Shopping Cart</h2>
+          </div>
+
+          <button class="commerce-panel-close" type="button" aria-label="Close panel" data-commerce-close>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="commerce-panel-column-head">
+          <span data-commerce-heading-left data-i18n="items">Items</span>
+          <span data-i18n="price">Price</span>
+        </div>
+
+        <div class="commerce-panel-list" data-commerce-list></div>
+      </div>
+
+      <aside class="commerce-summary-card">
+        <p class="commerce-summary-label" data-commerce-summary-label data-i18n="subtotal">Subtotal</p>
+        <h3 class="commerce-summary-total" data-commerce-subtotal>$0.00</h3>
+        <p class="commerce-summary-meta" data-commerce-summary-meta>0 items selected</p>
+        <button class="commerce-summary-btn" type="button" data-commerce-summary-action data-i18n="proceed_checkout">Proceed to checkout</button>
+      </aside>
+    </div>
+  </aside>
+
 
 
 
@@ -3591,3 +3686,4 @@
 </body>
 
 </html>
+
